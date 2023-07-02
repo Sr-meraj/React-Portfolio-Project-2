@@ -5,7 +5,23 @@ import Icon3 from '../../assets/images/icon3.png'
 import { BsBehance, BsInstagram, BsTelephone } from 'react-icons/bs'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FiMapPin, FiTwitter } from 'react-icons/fi'
+
+import emailjs from 'emailjs-com';
+import { useRef } from 'react';
+
 const Contact = () => {
+    const form = useRef()
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_awv99qs', 'template_w5j2r3y', form.current, 'qdjYfo7MNLWyD3udv')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
+        e.target.reset();
+    }
+
     return (
         <>
             {/* <!-- Contact --> */}
@@ -22,8 +38,8 @@ const Contact = () => {
                                     </div>
                                     <div className="right">
                                         <span>MAIL us</span>
-                                        <h4>srmeraj9@gmail.com</h4>
-                                        <h4>siamurrahmanmeraj@gmail.com</h4>
+                                        <h4><a href="mailto:srmeraj9@gmail.com">srmeraj9@gmail.com</a></h4>
+                                        <h4><a href="mailto:siamurrahmanmeraj@gmail.com">siamurrahmanmeraj@gmail.com</a></h4>
                                     </div>
                                 </li>
 
@@ -34,8 +50,8 @@ const Contact = () => {
                                     </div>
                                     <div className="right">
                                         <span>Contact Us</span>
-                                        <h4>+880-17504-35306</h4>
-                                        <h4>+880-19806-18615</h4>
+                                        <h4><a href="tel:+8801750435306">+880-17504-35306</a></h4>
+                                        <h4><a href="tel:+8801980618615">+880-19806-18615</a></h4>
                                     </div>
                                 </li>
 
@@ -64,7 +80,7 @@ const Contact = () => {
                                 <img src={BG1} alt="BG" className="bg-img" />
                                 <img src={Icon3} alt="Icon" />
                                 <h1>Let’s work <span>together.</span></h1>
-                                <form method="POST" action="mailer.php">
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="alert alert-success messenger-box-contact__msg" style={{ "display": 'none' }}
                                         role="alert">
                                         Your message was sent successfully.
