@@ -26,7 +26,7 @@ const Service = () => {
                     <Row>
 
                         {/* <!-- Sidebar --> */}
-                        <Col md={5} lg={4} style={{ "margin": '.5rem 0' }}>
+                        <Col md={5} lg={3} style={{ "margin": '.5rem 0' }}>
                             <div className="service-sidebar" data-aos="fade-right">
                                 <div className="service-sidebar-inner shadow-box">
                                     <ul>
@@ -52,7 +52,7 @@ const Service = () => {
                         </Col>
 
                         {/* <!-- Content --> */}
-                        <Col md={7} lg={8} style={{ "margin": '.5rem 0' }}>
+                        <Col md={7} lg={9} style={{ "margin": '.5rem 0' }}>
                             <h1 className="section-heading" data-aos="fade-up"><img src={Star2}
                                 alt="Star" /> My Offerings <img src={Star2} alt="Star" /></h1>
 
