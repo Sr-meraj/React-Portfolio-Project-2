@@ -1,26 +1,45 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import emailjs from 'emailjs-com';
 import './contact.css';
+
 import BG1 from '../../assets/images/bg1.png'
 import Icon3 from '../../assets/images/icon3.png'
 import { BsBehance, BsInstagram, BsTelephone } from 'react-icons/bs'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FiMapPin, FiTwitter } from 'react-icons/fi'
 
-import emailjs from 'emailjs-com';
-import { useRef } from 'react';
 
 const Contact = () => {
     const form = useRef()
+    const [message, setMessage] = useState('');
+    const [isSuccess, setIsSuccess] = useState(false);
+
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_awv99qs', 'template_w5j2r3y', form.current, 'qdjYfo7MNLWyD3udv')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.log('FAILED...', err);
+                setMessage('Your message was sent successfully.');
+                setIsSuccess(true)
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+                setMessage('Sorry, there was an error while sending your message.');
+                setIsSuccess(false)
             });
+
         e.target.reset();
-    }
+    };
+
+    useEffect(() => {
+        let timer;
+        if (message) {
+            timer = setTimeout(() => {
+                setMessage('');
+            }, 5000);
+        }
+        return () => clearTimeout(timer);
+    }, [message]);
 
     return (
         <>
@@ -81,21 +100,24 @@ const Contact = () => {
                                 <img src={Icon3} alt="Icon" />
                                 <h1>Let’s work <span>together.</span></h1>
                                 <form ref={form} onSubmit={sendEmail}>
-                                    <div className="alert alert-success messenger-box-contact__msg" style={{ "display": 'none' }}
-                                        role="alert">
-                                        Your message was sent successfully.
+                                    <div
+                                        className={`alert ${isSuccess ? 'alert-success' : 'alert-danger'} messenger-box-contact__msg`}
+                                        style={{ display: message ? 'block' : 'none' }}
+                                    >
+                                        {message}
+                                    </div>
+
+                                    <div className="input-group">
+                                        <input type="text" name="full-name" id="full-name" placeholder="Name *" required />
                                     </div>
                                     <div className="input-group">
-                                        <input type="text" name="full-name" id="full-name" placeholder="Name *" />
+                                        <input type="email" name="email" id="email" placeholder="Email *" required />
                                     </div>
                                     <div className="input-group">
-                                        <input type="email" name="email" id="email" placeholder="Email *" />
+                                        <input type="text" name="subject" id="subject" placeholder="Your Subject *" required />
                                     </div>
                                     <div className="input-group">
-                                        <input type="text" name="subject" id="subject" placeholder="Your Subject *" />
-                                    </div>
-                                    <div className="input-group">
-                                        <textarea name="message" id="message" placeholder="Your Message *"></textarea>
+                                        <textarea name="message" id="message" placeholder="Your Message *" required></textarea>
                                     </div>
                                     <div className="input-group">
                                         <button className="theme-btn submit-btn" name="submit" type="submit">Send
