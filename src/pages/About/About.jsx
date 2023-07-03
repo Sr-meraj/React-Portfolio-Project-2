@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../../assets/images/icon.svg'
 import BG1 from '../../assets/images/bg1.png'
 import Icon2 from '../../assets/images/icon2.png'
-import Me2 from '../../assets/images/srmeraj.png'
+import Me2 from '../../assets/images/siyamurrahmanmayraj.webp'
 import Star2 from '../../assets/images/star-2.png'
 import Sign from '../../assets/images/sign.png'
 import Credential from '../../components/Credential/Credential';
@@ -20,7 +20,31 @@ const About = () => {
                             <div className="about-image-box shadow-box">
                                 <img src={BG1} alt="BG" className="bg-img" />
                                 <div className="image-inner">
-                                    <img src={Me2} alt="About Me" />
+
+                                    <picture>
+
+                                        <source
+                                            srcSet={Me2}
+                                            loading="lazy"
+                                            type="image/webp"
+                                            alt="siyamurrahmanmayraj"
+                                        />
+
+                                        <source
+                                            srcSet={Me2}
+                                            loading="lazy"
+                                            type="image/jpg"
+                                            alt="siyamurrahmanmayraj"
+                                        />
+
+                                        <img
+                                            src={Me2}
+                                            loading="lazy"
+                                            type="image/jpg"
+                                            alt="siyamurrahmanmayraj" />
+
+                                    </picture>
+
                                 </div>
                             </div>
                         </div>

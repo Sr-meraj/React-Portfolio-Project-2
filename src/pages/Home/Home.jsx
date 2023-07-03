@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Icon from '../../assets/images/icon.svg'
 import Icon2 from '../../assets/images/icon2.png'
-import Me from '../../assets/images/srm2.jpg'
+import Me from '../../assets/images/srmeraj.webp'
 import Star1 from '../../assets/images/star1.svg'
 import BG1 from '../../assets/images/bg1.png'
 import Sign from '../../assets/images/sign.png'
@@ -29,7 +29,32 @@ const Home = () => {
                                 <Link className="overlay-link" to="/about"></Link>
                                 <img src={BG1} alt="BG" className="bg-img" />
                                 <div className="img-box">
-                                    <img src={Me} alt="About Me" />
+                                    <picture>
+
+                                        <source
+                                            srcSet={Me}
+                                            loading="lazy"
+                                            type="image/webp"
+                                            alt="srmeraj"
+                                        />
+
+                                        <source
+                                            srcSet={Me}
+                                            loading="lazy"
+                                            type="image/jpg"
+                                            alt="srmeraj"
+                                        />
+
+                                        <img
+                                            src={Me}
+                                            loading="lazy"
+                                            type="image/jpg"
+                                            alt="srmeraj" />
+
+                                    </picture>
+
+
+
                                 </div>
                                 <div className="infos">
                                     <h4>A WEB DEVELOPER</h4>

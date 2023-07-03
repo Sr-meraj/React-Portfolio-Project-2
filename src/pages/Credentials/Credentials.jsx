@@ -6,7 +6,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { FiTwitter } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import BG1 from '../../assets/images/bg1.png'
-import Me3 from '../../assets/images/srm.jpg'
+import Me3 from '../../assets/images/siamurrahmanmeraj.webp'
 
 const Credentials = () => {
     return (
@@ -20,7 +20,29 @@ const Credentials = () => {
                                 <div className="shadow-box">
                                     <img src={BG1} alt="BG" className="bg-img" />
                                     <div className="img-box">
-                                        <img src={Me3} alt="About Me" />
+                                        <picture>
+
+                                            <source
+                                                srcSet={Me3}
+                                                loading="lazy"
+                                                type="image/webp"
+                                                alt="siamurrahmanmeraj"
+                                            />
+
+                                            <source
+                                                srcSet={Me3}
+                                                loading="lazy"
+                                                type="image/jpg"
+                                                alt="siamurrahmanmeraj"
+                                            />
+
+                                            <img
+                                                src={Me3}
+                                                loading="lazy"
+                                                type="image/jpg"
+                                                alt="siamurrahmanmeraj" />
+
+                                        </picture>
                                     </div>
                                     <h2>Siyamur Rahman Meraj</h2>
                                     <p>@siyamurrahmanmeraj</p>
