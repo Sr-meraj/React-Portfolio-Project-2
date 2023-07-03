@@ -11,11 +11,15 @@ import { FiMapPin, FiTwitter } from 'react-icons/fi'
 
 const Contact = () => {
     const form = useRef()
+    const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState('');
     const [isSuccess, setIsSuccess] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsLoading(true); // Start the loading animation
+        setMessage('Sending...'); // Update the message
+
         emailjs.sendForm('service_awv99qs', 'template_w5j2r3y', form.current, 'qdjYfo7MNLWyD3udv')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
@@ -26,6 +30,9 @@ const Contact = () => {
                 console.log('FAILED...', error);
                 setMessage('Sorry, there was an error while sending your message.');
                 setIsSuccess(false)
+            })
+            .finally(() => {
+                setIsLoading(false); // Stop the loading animation
             });
 
         e.target.reset();
@@ -120,8 +127,16 @@ const Contact = () => {
                                         <textarea name="message" id="message" placeholder="Your Message *" required></textarea>
                                     </div>
                                     <div className="input-group">
-                                        <button className="theme-btn submit-btn" name="submit" type="submit">Send
-                                            Message</button>
+                                        <button className={`theme-btn submit-btn ${isLoading ? 'loading' : ''}`} name="submit" type="submit" disabled={isLoading}>
+                                            {isLoading ? (
+                                                <>
+                                                    Sending...
+                                                    <span className="spinner"></span>
+                                                </>
+                                            ) : (
+                                                'Send Message'
+                                            )}
+                                        </button>
                                     </div>
                                 </form>
                             </div>

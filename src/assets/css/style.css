@@ -131,7 +131,7 @@ ol {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 30px;
-    background: linear-gradient(120deg, rgba(0, 75, 249, 0.5), rgba(41, 0, 177, 0.8));
+    background: linear-gradient(120deg, rgb(0, 75, 249), rgba(21, 36, 255, 0.92));
 }
 
 .theme-btn:hover {
