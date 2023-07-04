@@ -62,13 +62,29 @@ const Credentials = () => {
                         <Col lg={8} md={7} className="credential-content flex-1">
                             <div className="credential-about" data-aos="zoom-in">
                                 <h2>About Me</h2>
-                                <p>Sit amet luctussd fav venenatis, lectus magna fringilla inis urna, porttitor rhoncus
-                                    dolor purus non enim praesent in elementum sahas facilisis leo, vel fringilla est
-                                    ullamcorper eget nulla facilisi etisam dignissim diam quis enim lobortis viverra
-                                    orci sagittis eu volutpat odio facilisis mauris sit.</p>
-                                <p>Scelerisque fermentum duisi faucibus in ornare quam sisd sit amet luctussd fav
-                                    venenatis, lectus magna fringilla zac urna, porttitor rhoncus dolor purus non enim
-                                    praesent cuz elementum sahas facilisis leot.</p>
+                                <p>
+                                    I am a full-stack developer based in Dhaka, Bangladesh, with a passion for crafting digital experiences. While my roots are in Dhaka, my work knows no borders as I collaborate with clients and projects from all around the world.
+
+                                </p>
+
+                                <p>
+                                    With a strong foundation in web design, illustration, and visual development, I bring a unique perspective to my projects. My diverse range of experience extends across various fields and industries, allowing me to approach challenges with creativity and adaptability.
+
+                                </p>
+
+                                <p>
+                                    From front-end to back-end, I love bringing ideas to life through code and design. My commitment to excellence drives me to continuously learn and stay up-to-date with the latest technologies and industry trends.
+                                </p>
+
+                                <p>
+                                    Whether it's building responsive websites, creating intuitive user interfaces, or developing robust backend systems, I thrive on turning ideas into functional and visually appealing solutions.
+
+                                </p>
+                                <p>
+
+                                    Let's work together to make your digital vision a reality!
+                                </p>
+
                             </div>
 
                             <div className="credential-edc-exp credential-experience">

@@ -55,7 +55,7 @@ const About = () => {
                             <div className="about-details-inner shadow-box">
                                 <img src={Icon2} alt="Star" />
                                 <h1>Siyamur Rahman Meraj</h1>
-                                <p>I am a San francisco-based product designer with a focus on web design, illustration,
+                                <p>I am a Dhaka-based product designer with a focus on Full Stact Developer
                                     a visual development. I have a diverse range of experience having worked across
                                     various fields and industries.</p>
                             </div>
