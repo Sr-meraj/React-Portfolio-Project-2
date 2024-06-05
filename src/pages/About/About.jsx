@@ -1,10 +1,10 @@
 import React from 'react';
-import Icon from '../../assets/images/icon.svg'
-import BG1 from '../../assets/images/bg1.png'
-import Icon2 from '../../assets/images/icon2.png'
-import Me2 from '../../assets/images/siyamurrahmanmayraj.webp'
-import Star2 from '../../assets/images/star-2.png'
-import Sign from '../../assets/images/sign.png'
+import BG1 from '../../assets/images/bg1.png';
+import Icon from '../../assets/images/icon.svg';
+import Icon2 from '../../assets/images/icon2.png';
+import Sign from '../../assets/images/sign.png';
+import Me2 from '../../assets/images/siyamurrahmanmayraj.webp';
+import Star2 from '../../assets/images/star-2.png';
 import Credential from '../../components/Credential/Credential';
 import LetsWork from '../../components/LetsWork/LetsWork';
 import Profile from '../../components/Profile/Profile';
@@ -55,9 +55,7 @@ const About = () => {
                             <div className="about-details-inner shadow-box">
                                 <img src={Icon2} alt="Star" />
                                 <h1>Siyamur Rahman Meraj</h1>
-                                <p>I am a Dhaka-based product designer with a focus on Full Stact Developer
-                                    a visual development. I have a diverse range of experience having worked across
-                                    various fields and industries.</p>
+                                <p>I'm a skilled web developer based in Dhaka, adept at crafting user-friendly and responsive digital solutions. With expertise in both front-end and back-end technologies, I create innovative web applications tailored to client needs.</p>
                             </div>
 
                         </div>
@@ -71,13 +69,13 @@ const About = () => {
 
                                 <ul>
                                     <li>
-                                        <p className="date">2020 - 2022</p>
-                                        <h2>WordPress Developer</h2>
+                                        <p className="date">12 april 2022</p>
+                                        <h2>Wordpress Developer - basic to advance</h2>
                                         <p className="type">Sorobindu</p>
                                     </li>
                                     <li>
-                                        <p className="date">2022 - 2023</p>
-                                        <h2>Front-End Developer</h2>
+                                        <p className="date">20 June 2023</p>
+                                        <h2>MERN Stack</h2>
                                         <p className="type">Programming Hero</p>
                                     </li>
                                 </ul>
@@ -90,17 +88,17 @@ const About = () => {
 
                                 <ul>
                                     <li>
-                                        <p className="date">2017 - 2021</p>
+                                        <p className="date">2019 - 2020</p>
                                         <h2>Diploma in Computer Science Engineering (CSE)</h2>
                                         <p className="type">
-                                            University of Institute of Science & Technology (IST)
+                                            Institute of Science & Technology (IST)
                                         </p>
                                     </li>
                                     <li>
-                                        <p className="date">2021 - 2025</p>
+                                        <p className="date">2024 - Present</p>
                                         <h2>BSC in Computer Science Engineering (CSE)</h2>
                                         <p className="type">
-                                            University of Nourth South University
+                                            Brahmanbaria University
                                         </p>
                                     </li>
 
@@ -124,22 +122,7 @@ const About = () => {
                                 <div data-aos="zoom-in">
                                     <Credential BG1={BG1} Sign={Sign} Icon={Icon} />
                                 </div>
-
                             </div>
-                            {/* <div className="blog-service-profile-wrap d-flex gap-24">
-                                <div data-aos="zoom-in">
-                                    <Profile BG1={BG1} Icon={Icon} />
-                                </div>
-
-                                <div data-aos="zoom-in" className="flex-1">
-                                    <LetsWork BG1={BG1} Icon={Icon} Icon2={Icon2} />
-                                </div>
-
-                                <div data-aos="zoom-in">
-                                    <Credential BG1={BG1} Sign={Sign} Icon={Icon} />
-                                </div>
-
-                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,7 @@
-import React from 'react';
-import './header.css'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './header.css';
 
 
 const Header = () => {
@@ -51,7 +50,7 @@ const Header = () => {
                             <ul className="menu text-capitalize">
                                 <li className=""><NavLink to="/">Home</NavLink></li>
                                 <li><NavLink to="about">About</NavLink></li>
-                                <li><NavLink to="works">Works</NavLink></li>
+                                <li><NavLink to="projects">Projects</NavLink></li>
                                 <li><NavLink to="contact">Contact</NavLink></li>
                             </ul>
                             <NavLink to="/contact" className="theme-btn">Let's talk</NavLink>

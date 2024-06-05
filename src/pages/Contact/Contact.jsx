@@ -1,12 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import React, { useEffect, useRef, useState } from 'react';
 import './contact.css';
 
-import BG1 from '../../assets/images/bg1.png'
-import Icon3 from '../../assets/images/icon3.png'
-import { BsBehance, BsInstagram, BsTelephone } from 'react-icons/bs'
-import { HiOutlineMail } from 'react-icons/hi'
-import { FiMapPin, FiTwitter } from 'react-icons/fi'
+import { BsInstagram, BsTelephone } from 'react-icons/bs';
+import { FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FiMapPin } from 'react-icons/fi';
+import { HiOutlineMail } from 'react-icons/hi';
+import BG1 from '../../assets/images/bg1.png';
+import Icon3 from '../../assets/images/icon3.png';
 
 
 const Contact = () => {
@@ -63,7 +64,7 @@ const Contact = () => {
                                         <HiOutlineMail />
                                     </div>
                                     <div className="right">
-                                        <span>MAIL us</span>
+                                        <span>Mail us</span>
                                         <h4><a href="mailto:srmeraj9@gmail.com">srmeraj9@gmail.com</a></h4>
                                         <h4><a href="mailto:siamurrahmanmeraj@gmail.com">siamurrahmanmeraj@gmail.com</a></h4>
                                     </div>
@@ -76,8 +77,8 @@ const Contact = () => {
                                     </div>
                                     <div className="right">
                                         <span>Contact Us</span>
-                                        <h4><a href="tel:+8801750435306">+880-17504-35306</a></h4>
-                                        <h4><a href="tel:+8801980618615">+880-19806-18615</a></h4>
+                                        <h4><a href="tel:+8801600053406">+880-16000-53406</a></h4>
+                                        <h4><a href="tel:+8801302023206">+880-13020-23206</a></h4>
                                     </div>
                                 </li>
 
@@ -88,16 +89,16 @@ const Contact = () => {
                                     </div>
                                     <div className="right">
                                         <span>Location</span>
-                                        <h4>22 Baker Street, Texas <br />United States <br />W1U 3BW</h4>
+                                        <h4>Brahmanbaria Sadar<br />Brahmanbaria <br />Bangladesh</h4>
                                     </div>
                                 </li>
                             </ul>
 
                             <h3 data-aos="fade-up">Social Info</h3>
                             <ul className="social-links d-flex align-center" data-aos="zoom-in">
-                                <li><a className="shadow-box" href=""><BsBehance /></a></li>
-                                <li><a className="shadow-box" href=""><FiTwitter /></a></li>
-                                <li><a className="shadow-box" href=""> <BsInstagram /></a></li>
+                                <li><a className="shadow-box" href="https://x.com/Srm_siyam"><FaTwitter /></a></li>
+                                <li><a className="shadow-box" href="https://facebook.com/srmeraj1"><FaFacebookF /></a></li>
+                                <li><a className="shadow-box" href="https://instagram.com/srmeraj1"> <BsInstagram /></a></li>
                             </ul>
                         </div>
 

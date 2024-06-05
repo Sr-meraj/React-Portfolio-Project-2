@@ -34,7 +34,7 @@ const Footer = () => {
                         <ul className="footer-menu">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="about">About</Link></li>
-                            <li><Link to="works">Works</Link></li>
+                            <li><Link to="projects">Projects</Link></li>
                             <li><Link to="contact">Contact</Link></li>
                         </ul>
                         <p className="copyright">

@@ -1,26 +1,25 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Icon from '../../assets/images/icon.svg'
-import Icon2 from '../../assets/images/icon2.png'
-import Me from '../../assets/images/srmeraj.webp'
-import Star1 from '../../assets/images/star1.svg'
-import BG1 from '../../assets/images/bg1.png'
-import Sign from '../../assets/images/sign.png'
-import WorkImg from '../../assets/images/my-works.png'
-import Gfonts from '../../assets/images/gfonts.png'
+import { BsCamera } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa";
+import { IoIosColorFilter } from "react-icons/io";
+import { PiPencilCircle } from "react-icons/pi";
+import { Link } from 'react-router-dom';
+import BG1 from '../../assets/images/bg1.png';
+import Gfonts from '../../assets/images/gfonts.png';
+import Icon from '../../assets/images/icon.svg';
+import Icon2 from '../../assets/images/icon2.png';
+import WorkImg from '../../assets/images/my-works.png';
+import Sign from '../../assets/images/sign.png';
+import Me from '../../assets/images/srmeraj.webp';
+import Star1 from '../../assets/images/star1.svg';
 import Credential from '../../components/Credential/Credential';
 import LetsWork from '../../components/LetsWork/LetsWork';
 import Profile from '../../components/Profile/Profile';
-import { Link } from 'react-router-dom';
-import { BsCamera } from "react-icons/bs";
-import { PiPencilCircle } from "react-icons/pi";
-import { IoIosColorFilter } from "react-icons/io";
-import { FaLaptopCode } from "react-icons/fa";
 
 const Home = () => {
     return (
         <>
-            {/* <!-- About --> */}
             <section className="about-area">
                 <Container>
                     <div className="row">
@@ -30,7 +29,6 @@ const Home = () => {
                                 <img src={BG1} alt="BG" className="bg-img" />
                                 <div className="img-box">
                                     <picture>
-
                                         <source
                                             srcSet={Me}
                                             loading="lazy"
@@ -73,16 +71,19 @@ const Home = () => {
                                     <div className="banner shadow-box">
                                         <div className="marquee">
                                             <div>
-                                                <span>LATEST WORK AND <b>FEATURED</b> <img
-                                                    src={Star1} alt="Star" /> LATEST WORK AND
-                                                    <b>FEATURED</b>
+                                                <span>
+                                                    LATEST WORK AND<b> FEATURED</b>
                                                     <img src={Star1} alt="Star" />
-                                                    LATEST WORK AND <b>FEATURED</b>
+                                                    LATEST WORK AND<b> FEATURED</b>
                                                     <img src={Star1} alt="Star" />
-                                                    LATEST WORK AND <b>FEATURED</b> LATEST WORK AND <img
-                                                        src={Star1} alt="Star" /> LATEST WORK AND
-                                                    <b>FEATURED</b> LATEST WORK AND <img src={Star1}
-                                                        alt="Star" />
+                                                    LATEST WORK AND<b> FEATURED</b>
+                                                    <img src={Star1} alt="Star" />
+                                                    LATEST WORK AND<b> FEATURED</b>
+                                                    <img src={Star1} alt="Star" />
+                                                    LATEST WORK AND<b> FEATURED</b>
+                                                    <img src={Star1} alt="Star" />
+                                                    LATEST WORK AND<b> FEATURED</b>
+                                                    <img src={Star1} alt="Star" />
                                                 </span>
                                             </div>
                                         </div>
@@ -97,7 +98,7 @@ const Home = () => {
 
                                     <div data-aos="zoom-in">
                                         <div className="about-project-box info-box shadow-box h-full">
-                                            <Link className="overlay-link" to="/works"></Link>
+                                            <Link className="overlay-link" to="/projects"></Link>
                                             <img src={BG1} alt="BG" className="bg-img" />
                                             <img src={WorkImg} alt="My Works" />
                                             <div className="d-flex align-items-center justify-content-between">
@@ -185,17 +186,17 @@ const Home = () => {
                                 <img src={BG1} alt="BG" className="bg-img" />
                                 <div className="clients d-flex align-items-start gap-24 justify-content-center">
                                     <div className="client-item">
-                                        <h1>07</h1>
+                                        <h1>03+</h1>
                                         <p>Years <br />Experience</p>
                                     </div>
 
                                     <div className="client-item">
-                                        <h1>+125</h1>
+                                        <h1>45+</h1>
                                         <p>CLIENTS <br />WORLDWIDE</p>
                                     </div>
 
                                     <div className="client-item">
-                                        <h1>+210</h1>
+                                        <h1>90+</h1>
                                         <p>Total <br />Projects</p>
                                     </div>
                                 </div>

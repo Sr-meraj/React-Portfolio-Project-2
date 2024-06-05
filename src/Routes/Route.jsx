@@ -49,7 +49,7 @@
 
 // export default router;
 
-import { createRoutesFromElements, createBrowserRouter, Route } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 
 import App from "../App";
 import About from "../pages/About/About";
@@ -67,7 +67,7 @@ const router = createBrowserRouter(
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="credentials" element={<Credentials />} />
-            <Route path="works" element={<Works />} />
+            <Route path="projects" element={<Works />} />
             <Route path="work-details" element={<WorkDetails />} />
             <Route path="service" element={<Service />} />
             <Route path="contact" element={<Contact />} />
